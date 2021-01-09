@@ -10,6 +10,8 @@ import pandas
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 df = px.data.tips()
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+server = app.server
+
 infla = pandas.read_csv(r"inflation.csv")
 unemp = pandas.read_csv(r"unemployment.csv")
 gdp = pandas.read_csv(r"gdp.csv")
