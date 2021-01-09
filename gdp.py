@@ -2,14 +2,13 @@ import dash
 import dash_html_components as html
 import dash_core_components as dcc
 from dash.dependencies import Input, Output, ALL, State, MATCH, ALLSMALLER
-import plotly-express as px
+import plotly_express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import pandas
 
-external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 df = px.data.tips()
-app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+app = dash.Dash(__name__)
 server = app.server
 
 infla = pandas.read_csv(r"inflation.csv")
